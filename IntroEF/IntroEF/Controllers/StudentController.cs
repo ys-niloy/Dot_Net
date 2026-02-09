@@ -79,9 +79,7 @@ namespace IntroEF.Controllers
         [HttpPost]
         public ActionResult Edit(Student s) {
             var dbObj = db.Students.Find(s.Id);
-            //s.Cgpa = dbObj.Cgpa;
-            //db.Students.Remove(dbObj);
-            //db.SaveChanges();
+            
             db.Entry(dbObj).CurrentValues.SetValues(s);
             /*dbObj.Email = s.Email;
             dbObj.Name = s.Name;
