@@ -40,7 +40,6 @@ namespace IntroEF.Controllers
             return data;
         }
 
-        // GET: Student
         [HttpGet]
         public ActionResult Create() {
             return View(new Student());
@@ -67,7 +66,7 @@ namespace IntroEF.Controllers
             return View(Convert(data));
         }
         public ActionResult Details(int id) {
-            var data = db.Students.Find(id); //finds with primary key
+            var data = db.Students.Find(id); 
 
             return View(data);
         }
